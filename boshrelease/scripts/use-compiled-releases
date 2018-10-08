@@ -9,7 +9,7 @@ RELEASE_VERSION=$( grep -E '^version: ' release.MF | awk '{print $2}' | tr -d "\
 RELEASE_URL=$(cat compiled-releases/url)
 RELEASE_SHA1=$(sha1sum compiled-releases/*.tgz | awk '{print $1}')
 
-STEMCELL_OS=${STEMCELL_OS:-ubuntu-trusty}
+STEMCELL_OS=${STEMCELL_OS:-ubuntu-xenial}
 STEMCELL_VERSION=$(cat stemcell/version)
 
 git clone ${REPO_ROOT} ${REPO_OUT}
